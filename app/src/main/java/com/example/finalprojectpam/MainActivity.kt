@@ -12,6 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.finalprojectpam.ui.theme.FinalprojectpamTheme
+import com.example.finalprojectpam.ui.viewmodel.KeuanganApp
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,28 +21,11 @@ class MainActivity : ComponentActivity() {
         setContent {
             FinalprojectpamTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
+                 KeuanganApp(
+                     modifier = Modifier.padding(innerPadding)
+                 )
                 }
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    FinalprojectpamTheme {
-        Greeting("Android")
     }
 }
