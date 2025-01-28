@@ -6,17 +6,20 @@ plugins {
 }
 
 android {
-    namespace = "com.example.pertemuan12"
-    compileSdk = 35
+    namespace = "com.example.finalprojectpam"
+    compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.pertemuan12"
+        applicationId = "com.example.finalprojectpam"
         minSdk = 30
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables {
+            useSupportLibrary = true
+        }
     }
 
     buildTypes {
@@ -80,10 +83,11 @@ dependencies {
     implementation(libs.androidx.lifecycle.viewmodel.compose)
     implementation(libs.androidx.navigation.compose)
 
+    ksp("androidx.room:room-compiler:2.5.2")
+
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.7")
     implementation("androidx.navigation:navigation-compose:2.8.3")
 
     implementation("androidx.room:room-runtime:2.6.0")
-    ksp("androidx.room:room-compiler:2.5.2")
     implementation("androidx.room:room-ktx:2.6.0")
 }
